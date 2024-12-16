@@ -1,0 +1,79 @@
+.nav-container {
+    position: sticky; /* Keeps the navbar at the top of the page */
+    top: 0;
+    background-color: #333; /* Dark background color */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search bar styling */
+  .search-bar input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    width: 200px;
+    margin-bottom: 10px; /* Adds space below the search bar */
+  }
+  
+  /* Icon container */
+  .icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.2s, color 0.2s;
+  }
+  
+  /* Icon hover effect */
+  .icon:hover {
+    color: #f0a500; /* Highlight color on hover */
+    transform: scale(1.2); /* Slight zoom on hover */
+  }
+  
+  /* Navbar styling for different sections */
+  .navbar-1,
+  .navbar-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .left-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    
+  }
+  
+  .left-part-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .navbar-2{
+        flex-direction:column ;
+        align-items: center;
+        justify-content: center;
+        }
+    .left-part{
+        width: 100%;
+    }
+  }
+  
