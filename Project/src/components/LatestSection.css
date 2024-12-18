@@ -1,0 +1,28 @@
+.latest-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .latest-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .latest-section p {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* At least 2 cards per row on mobile */
+    }
+  }
+  

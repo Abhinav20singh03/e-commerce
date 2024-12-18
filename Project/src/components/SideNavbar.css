@@ -1,0 +1,74 @@
+/* General Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body {
+    margin: 0;
+    font-family: Poppins;
+  }
+  
+  /* Side Navbar */
+.sidenav-img{
+width:150px;
+}
+
+  .side-navbar {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #111;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Logo at the top */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 0;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-item:hover {
+    background-color: #575757;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+
+  /* Main Content */
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .side-navbar {
+      width: 200px;
+    }
+    .main-content {
+      margin-left: 200px;
+    }
+  }
+  
+
+  

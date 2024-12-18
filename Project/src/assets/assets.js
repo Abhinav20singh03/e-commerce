@@ -73,9 +73,11 @@ import contact_img from './contact_img.png'
 import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import cross_icon from './cross_icon.png'
+import logo_negative from "./logo-negate.png"
 
 export const assets = {
     logo,
+    logo_negative,
     hero_img,
     cart_icon,
     dropdown_icon,
@@ -108,17 +110,18 @@ export const products = [
         date: 1716634345448,
         bestseller: true
     },
+    
     {
-        _id: "aaaab",
+        _id: "aaaal",
         name: "Men Round Neck Pure Cotton T-shirt",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 200,
-        image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
+        price: 150,
+        image: [p_img12],
         category: "Men",
         subCategory: "Topwear",
-        sizes: ["M", "L", "XL"],
-        date: 1716621345448,
-        bestseller: true
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716624445448,
+        bestseller: false
     },
     {
         _id: "aaaac",
@@ -229,17 +232,19 @@ export const products = [
         bestseller: false
     },
     {
-        _id: "aaaal",
+        _id: "aaaab",
         name: "Men Round Neck Pure Cotton T-shirt",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
-        price: 150,
-        image: [p_img12],
+        price: 200,
+        image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
         category: "Men",
         subCategory: "Topwear",
-        sizes: ["S", "M", "L", "XL"],
-        date: 1716624445448,
-        bestseller: false
-    },
+        sizes: ["M", "L", "XL"],
+        date: 1716621345448,
+        bestseller: true
+    }
+    
+    ,
     {
         _id: "aaaam",
         name: "Women Round Neck Cotton Top",

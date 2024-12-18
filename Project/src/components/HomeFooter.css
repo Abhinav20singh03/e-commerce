@@ -1,0 +1,42 @@
+.homeFooter-container{
+    display: flex;
+    justify-content:space-between ;
+    padding: 10px;
+    margin:40px;
+    
+}
+.sub-container-item{
+    font-size: small;
+    margin-bottom: 5px;
+    color: rgba(0, 0, 0, 0.784);
+    cursor: pointer;
+}
+.company-tag{
+    width:50%;
+    margin-bottom:10px;
+}
+.company-tag-logo{
+    width:150px;
+}
+.sub-container-heading{
+    font-weight: 600;
+    margin-bottom:20px;
+    display: flex;
+    justify-content: start;
+}
+
+@media (max-width:768px){
+    .homeFooter-container{
+        flex-direction: column;
+    }
+    .company-tag{
+        margin: 30px;
+        margin-left:0px;
+        margin-right:0px;
+    }
+    .sub-container{
+        margin:30px;
+        margin-left:0px;
+        margin-right:0px;
+    }
+}

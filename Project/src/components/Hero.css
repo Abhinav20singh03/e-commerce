@@ -1,0 +1,60 @@
+.hero-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://e682s2uy5zo.exactdn.com/wp-content/uploads/2021/01/neutral-clothes-2-of-8-1600x2400.jpg?strip=all&lossy=1&ssl=1'); /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px; /* Adjust height as needed */
+    margin-left: 40px; /* Left margin */
+    margin-right: 40px; /* Right margin */
+    top:20px;
+    border:2px solid black;
+  }
+  
+  .hero-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); /* Dark overlay with slight transparency */
+    z-index: 0; /* Put the dark overlay behind the text */
+  }
+  
+  .hero-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    z-index: 1; /* Ensure text appears above the overlay */
+  }
+  
+  .hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .shop-now-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #a06553;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+  }
+  
+  .shop-now-btn:hover {
+    background-color: #794838;
+  }
+  

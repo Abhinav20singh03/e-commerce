@@ -1,0 +1,29 @@
+.policy-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:40px;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.184);
+    padding: 10px;
+    font-size: 14px;
+}
+.policy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    gap:10px;
+    
+}
+.policy-img{
+    width: 50px;
+}
+ 
+@media (max-width :768px){
+    .policy-container{
+        flex-direction: column;
+    }
+}
