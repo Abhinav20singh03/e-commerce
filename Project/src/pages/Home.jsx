@@ -14,8 +14,7 @@ const Home = () => {
         <LatestSection size={4} sectionHeading={"BESTSELLER"} sectionDescription={"Discover our newest arrivals! These are the products that have just hit the store."}/>
         <Policy/>
         <Subscribe/>
-        <HomeFooter/>
-        <Footer/>
+        
     </div>
   )
 }

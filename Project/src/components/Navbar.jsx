@@ -38,7 +38,10 @@ const Navbar = () => {
         <div className='navigation-features'>
             <Dropdown  label="Hover me" options={dropdownOptions} />
             <img className="features" onClick={()=>{navigate("/cart")}} src={assets.cart_icon}/>
-            <img className="features" onClick={()=>{setSearchBar(true)}} src={assets.search_icon}/>
+            <img className="features" onClick={()=>{
+                navigate("/collection")
+                setSearchBar(true)
+                }} src={assets.search_icon}/>
             <img className='features-menu' src={assets.menu_icon} onClick={()=>{setSideNavbarVisible(prev=>!prev)}}/>
         </div>  
     </div>
@@ -47,7 +50,8 @@ const Navbar = () => {
         <>
         <div className='search-bar-container'>
         <input type='text' placeholder='Search' className="search-bar"/>
-        <img src={assets.cross_icon} className="search-cross" onClick={()=>{setSearchBar(false)}}/>
+        <img src={assets.cross_icon} className="search-cross" onClick={()=>{
+            setSearchBar(false)}}/>
         </div>
         </> : 
         <></>

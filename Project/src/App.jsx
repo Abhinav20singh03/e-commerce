@@ -11,6 +11,8 @@ import Orders from './pages/Orders'
 import Product from './pages/Product'
 import Navbar from './components/Navbar'
 import Login from './pages/Login'
+import HomeFooter from './components/HomeFooter'
+import Footer from './components/Footer'
 function App() {
 
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path="/product/:productId" element={<Product/>} /> 
         <Route path="/login" element={<Login/>} />  
       </Routes>
+      <HomeFooter/>
+      <Footer/>
     </div>
   )
 }

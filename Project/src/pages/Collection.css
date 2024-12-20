@@ -1,0 +1,87 @@
+.collection-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px;
+    
+    padding: 10px;
+  }
+  
+  .filter-container {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+  }
+  
+  .filter-container-heading {
+    font-size: larger;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .filter-container-box {
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid rgba(0, 0, 0, 0.504);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .filter-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #000000a5;
+    font-size: 14px;
+  }
+  
+  .filter-item input {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .item-container {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 10px;
+    margin-left: 40px;
+  }
+  
+
+  .item-container-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    padding: 10px;
+    gap:10px
+  }
+  
+  .item-container-subcontainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .item-container-heading {
+    font-size: larger;
+    font-weight: 600;
+  }
+
+  .filter-container-box-heading{
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+ 
+  @media (max-width : 768px) {
+    .collection-container{
+        flex-direction: column;
+    }
+    .item-container{
+        margin:10px;
+    }
+  }
