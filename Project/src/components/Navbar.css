@@ -41,7 +41,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin:10px;
+    margin:20px;
 }
 .search-cross{
     width:15px;
@@ -52,8 +52,7 @@
     padding: 10px; /* Add padding inside the input field */
     border-radius: 20px; /* Round the corners */
     border: 1px solid rgba(0, 0, 0, 0.4); /* Border with slight transparency */
-    margin-right: 20px; /* Add some spacing */
-    margin-left: 20px; /* Add some spacing */
+    margin-right: 15px;
     outline: none; /* Remove the default focus outline */
     font-size: 16px; /* Improve text readability */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better appearance */
