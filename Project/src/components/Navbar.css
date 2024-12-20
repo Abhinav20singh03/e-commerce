@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-.container{
+.navbar-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,6 +69,13 @@
 @media screen and (max-width: 768px) {
    .pages{
     display: none;
+   }
+   .navbar-container{
+    margin-left: 15px;
+    margin-right:15px;
+   }
+   .navigation-features{
+    gap:17px;
    }
 }
 @media screen and (min-width: 768px) {

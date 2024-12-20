@@ -3,7 +3,9 @@ import "./Navbar.css"
 import { NavLink } from 'react-router-dom'
 import { assets  } from '../assets/assets'
 import { useNavigate } from "react-router-dom";
-
+import { IoSearchOutline } from "react-icons/io5";
+import { FiShoppingCart } from "react-icons/fi";
+import { BsPersonCircle } from "react-icons/bs";
 import Dropdown from './Dropdown';
 import SideNavbar from './SideNavbar';
 const Navbar = () => {
@@ -18,7 +20,7 @@ const Navbar = () => {
     const navigate = useNavigate();
   return (
     <>  
-        <div className='container'>
+        <div className='navbar-container'>
         {
             sideNavbarVisible ? 
             <>  
@@ -37,8 +39,8 @@ const Navbar = () => {
         </div>  
         <div className='navigation-features'>
             <Dropdown  label="Hover me" options={dropdownOptions} />
-            <img className="features" onClick={()=>{navigate("/cart")}} src={assets.cart_icon}/>
-            <img className="features" onClick={()=>{
+            <FiShoppingCart size="25px" onClick={()=>{navigate("/cart")}}/>
+            <IoSearchOutline size="25px"  onClick={()=>{
                 navigate("/collection")
                 setSearchBar(true)
                 }} src={assets.search_icon}/>

@@ -24,5 +24,9 @@
     .product-grid {
       grid-template-columns: repeat(2, 1fr); /* At least 2 cards per row on mobile */
     }
+    .latest-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
   }
   

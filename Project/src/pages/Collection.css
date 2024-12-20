@@ -80,6 +80,7 @@
   @media (max-width : 768px) {
     .collection-container{
         flex-direction: column;
+        margin:15px;
     }
     .item-container{
         margin:10px;
