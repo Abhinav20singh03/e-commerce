@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./Collection.css";
-import { products } from '../assets/assets';
 import ProductCard from '../components/ProductCard';
-
+import { AppContext } from '../context/AppContext';
 const Collection = () => {
+  const {products} = useContext(AppContext);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import ProductCard from './ProductCard';
 import './LatestSection.css';
-import { products } from '../assets/assets';
+import { AppContext } from '../context/AppContext';
 const LatestSection = ({size,sectionHeading,sectionDescription}) => {
 
-  
+  const {products} = useContext(AppContext);
+
   const productarray = [];
 
   for(let i=0;i<size;i++){

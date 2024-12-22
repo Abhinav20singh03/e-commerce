@@ -10,7 +10,7 @@ const Hero = () => {
         <p>Shop Now and Discover the Trendiest Styles!</p>
         <button className="shop-now-btn" onClick={()=>{
             navigate("/collection")
-        }}>Shop Now</button>
+        }}>SHOP NOW</button>
       </div>
     </section>
   );

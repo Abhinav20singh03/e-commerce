@@ -13,6 +13,7 @@ import Navbar from './components/Navbar'
 import Login from './pages/Login'
 import HomeFooter from './components/HomeFooter'
 import Footer from './components/Footer'
+import Search from "./pages/Search"
 function App() {
 
   return (
@@ -26,8 +27,9 @@ function App() {
         <Route path="/contact" element={<Contact/>} />  
         <Route path="/orders" element={<Orders/>} />  
         <Route path="/placeorder" element={<PlaceOrder/>} />  
-        <Route path="/product/:productId" element={<Product/>} /> 
+        <Route path="/product/:id" element={<Product/>} /> 
         <Route path="/login" element={<Login/>} />  
+        <Route path="/search" element={<Search/>}/>
       </Routes>
       <HomeFooter/>
       <Footer/>

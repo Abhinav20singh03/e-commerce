@@ -1,0 +1,119 @@
+.product-page-container{
+    display: flex ;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:20px ;
+    
+}
+.product-page-container-right{
+    width: 40%;
+    margin-left: 100px ;
+}
+.product-page-name{
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.product-page-bestseller{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.product-page-cost{
+    font-size:25px;
+    font-weight:600;
+    margin-bottom:30px;
+}
+.product-page-description{
+    font-size:14px ;
+    color: #000000c4;
+    margin-bottom: 30px;
+}
+.product-page-size{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    margin-bottom:10px
+}
+.size-button{
+    display: flex;
+    font-family: Poppins;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    padding:18px ;
+    width: 25px;
+    height: 25px;
+    background-color: #f0eeeec4;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.184);
+    cursor: pointer;
+
+}
+.product-page-description{
+    width: 100%;
+}
+.size-heading{
+    margin-bottom:10px;
+}
+.size-button:hover{
+  background-color: black;
+  color: white;
+  transition: 200ms;
+}
+.product-page-checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(86, 60, 60);
+    width:150px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.product-page-checkout:hover{
+    background-color: rgb(173, 112, 112);
+    color: rgb(255, 255, 255);
+    transition: 300ms;
+}
+.product-page-footer{
+    font-size: small;
+}
+@media (max-width:768px){
+    .product-page-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-page-image{
+        width:300px;
+    }
+    .product-page-container-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin:0px;
+        width: 100%;
+    }
+    .product-page-name,.product-page-cost,.product-page-bestseller{
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+    }
+    .product-page-description{
+        text-align: justify;
+        width: 100%;
+    }
+    .size-heading,.product-page-size,.product-page-checkout{
+        display: flex;
+        justify-content: center;
+    }
+    .product-page-checkout{
+        width: 40%;
+    }
+    
+}

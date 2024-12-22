@@ -9,6 +9,7 @@
     font-size: small;
     margin-bottom: 5px;
     color: rgba(0, 0, 0, 0.784);
+    text-align: justify;
     cursor: pointer;
 }
 .company-tag{
@@ -30,9 +31,12 @@
         flex-direction: column;
     }
     .company-tag{
-        margin: 30px;
-        margin-left:0px;
-        margin-right:0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap:20px;
+        width: 100%;
     }
     .sub-container{
         margin:30px;
