@@ -19,7 +19,7 @@ const Navbar = () => {
 
   const {cartProducts} = useContext(AppContext);
   const [sideNavbarVisible, setSideNavbarVisible] = useState(false);
-  const [cartCount, setCartCount] = useState(cartProducts); // Example cart count
+  const [cartCount, setCartCount] = useState(cartProducts);
 
   useEffect(()=>{
     setCartCount(cartProducts.length);

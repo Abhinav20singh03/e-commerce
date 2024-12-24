@@ -44,7 +44,7 @@
   
   .add-to-cart {
     padding: 12px 25px;
-    font-size: 16px;
+    font-size: 14px;
     background-color: #a06553;
     color: white;
     border: none;
@@ -52,6 +52,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     width: 100%;
+    font-family: Poppins;
   }
   
   .add-to-cart:hover {

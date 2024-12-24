@@ -46,8 +46,7 @@
   .item-container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    margin-left: 40px;
+    width: 100%;
   }
   
 
@@ -82,6 +81,9 @@
         margin:15px;
     }
     .item-container{
-        margin:10px;
+       
+    }
+    .item-container-heading{
+      font-size: medium;
     }
   }

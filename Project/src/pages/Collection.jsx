@@ -2,11 +2,31 @@ import React, { useContext, useEffect, useState } from 'react';
 import "./Collection.css";
 import ProductCard from '../components/ProductCard';
 import { AppContext } from '../context/AppContext';
+import SortDropdown from '../components/SortDropdown';
 const Collection = () => {
-  const {products} = useContext(AppContext);
+  const {products,sortType,setSortType} = useContext(AppContext);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
+  const dropdownOptions = [
+    { label: "High to Low" ,id:"1" },
+    { label: "Low to High",  id:"2"},
+    { label: "Relevance",  id:"3"}
+  ];
+ 
+  
+  useEffect(() => {
+    let filtered = [...filterProducts];
+  
+    if (sortType === "Low to High") {
+      filtered = filtered.sort((a, b) => a.price - b.price);
+    } else if (sortType === "High to Low") {
+      filtered = filtered.sort((a, b) => b.price - a.price);
+    }
+  
+    setFilterProducts(filtered); 
+  }, [sortType]); 
+  
 
   useEffect(() => {
     setFilterProducts(products);
@@ -19,6 +39,9 @@ const Collection = () => {
     } else {
       setCategory((prev) => prev.filter((item) => item !== e.target.name));
     }
+
+    setSortType("Relevance");
+
   };
 
   const toggleSubCategory = (e) => {
@@ -28,6 +51,9 @@ const Collection = () => {
     } else {
       setSubCategory((prev) => prev.filter((item) => item !== name));
     }
+
+    setSortType("Relevance");
+
   };
 
   useEffect(() => {
@@ -82,7 +108,7 @@ const Collection = () => {
       <div className='item-container'>
         <div className='item-container-header'>
           <div className='item-container-heading'>ALL COLLECTIONS</div>
-          <div className='sort'>Sort by Relevance</div>
+          <SortDropdown dropdownOptions={dropdownOptions} />
         </div>
         <div className='item-container-subcontainer'>
   {

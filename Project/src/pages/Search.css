@@ -15,6 +15,7 @@
     border-radius: 20px; /* Round the corners */
     border: 1px solid rgba(0, 0, 0, 0.4); /* Border with slight transparency */
     margin-right: 15px;
+    margin-left: 15px;
     outline: none; /* Remove the default focus outline */
     font-size: 16px; /* Improve text readability */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for better appearance */
@@ -25,4 +26,10 @@
   .search-bar:focus {
     border-color: rgba(0, 0, 0, 0.6); /* Darken the border on focus */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Emphasize the shadow on focus */
+  }
+  .search-page-products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
   }

@@ -1,7 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { AppContext } from '../context/AppContext';
 import { useParams } from 'react-router-dom';
-
+import { ToastContainer, toast } from 'react-toastify';
 import "./Product.css";
 
 const Product = () => {
@@ -17,6 +17,10 @@ const Product = () => {
 
 
   const addToCartHandler = () => {
+    toast.success("Item added to cart", {
+      position: "top-center",
+    });
+    
     sizeArray.forEach((size) => {
       const productObject = {
         id: product.id,
@@ -70,6 +74,7 @@ const Product = () => {
         <div className="product-page-checkout" onClick={addToCartHandler}>
           ADD TO CART
         </div>
+        <ToastContainer />
         <div className="product-page-footer">
           <div>100% Original Product.</div>
           <div>Cash on delivery is available on this project.</div>
