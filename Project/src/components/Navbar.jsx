@@ -17,8 +17,8 @@ const Navbar = () => {
     { label: "Option 3", link: "#option3" },
   ];
 
-  const {cartProducts} = useContext(AppContext);
-  const [sideNavbarVisible, setSideNavbarVisible] = useState(false);
+  const {cartProducts,setSideNavbarVisible,sideNavbarVisible} = useContext(AppContext);
+  
   const [cartCount, setCartCount] = useState(cartProducts);
 
   useEffect(()=>{
@@ -72,7 +72,7 @@ const Navbar = () => {
           <img
             className="features-menu"
             src={assets.menu_icon}
-            onClick={() => setSideNavbarVisible((prev) => !prev)}
+            onClick={() => setSideNavbarVisible(true)}
           />
         </div>
       </div>

@@ -1,23 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import "./Search.css";
-import { products } from '../assets/assets'; // Assuming products is an array of product objects
+import { products } from '../assets/assets';
 import ProductCard from '../components/ProductCard';
 
 const Search = () => {
-  const [searchedProduct, setSearchedProduct] = useState([]); // State for displaying filtered products
-  const [query, setQuery] = useState(""); // State for storing the search query
+  const [searchedProduct, setSearchedProduct] = useState([]);
+  const [query, setQuery] = useState(""); 
 
-  // Initialize products on mount
   useEffect(() => {
     setSearchedProduct(products);
   }, []);
 
-  // Handle search input change
+
   const searchHandler = (event) => {
     const inputValue = event.target.value.toLowerCase();
-    setQuery(inputValue); // Update the search query
+    setQuery(inputValue);
     const filteredProducts = products.filter((product) =>
-      product.name.toLowerCase().startsWith(inputValue)
+      product.name.toLowerCase().includes(inputValue)
     );
     setSearchedProduct(filteredProducts);
   };

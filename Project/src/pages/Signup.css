@@ -1,0 +1,90 @@
+/* Container for both email and password inputs */
+.Signup-input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .Signup-email,
+  .Signup-password,
+  .Signup-name {
+    width: 100%;
+    padding: 8px;
+    font-family: Poppins;
+    padding-right: 40px; /* To accommodate the icon */
+    box-sizing: border-box; /* Ensures padding doesn't overflow */
+  }
+  
+  .password-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  .password-icon:hover {
+    color: black;
+  }
+  
+  .Signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px;
+  }
+  
+  .Signup-box {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Signup-heading {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .Signup-features {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  .Signup-feature {
+    cursor: pointer;
+    font-size: 13px;
+  }
+  
+  .Signup-button {
+    padding: 10px;
+    font-family: Poppins;
+    background-color: rgb(80, 57, 57);
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100px;
+    transition: 300ms;
+  }
+  
+  .Signup-button:hover {
+    background-color: rgb(152, 118, 118);
+  }
+  
+  @media (max-width: 768px) {
+    .Signup-box {
+      width: 100%;
+      margin: 20px;
+    }
+  }
+  

@@ -1,42 +1,53 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useContext } from 'react';
 import './SideNavbar.css'; // Assuming the CSS is in this file
 import { assets } from '../assets/assets';
-
+import { RxCross1 } from "react-icons/rx";
+import { AppContext } from '../context/AppContext';
+import { useNavigate } from 'react-router-dom';
 const SideNavbar = () => {
+   const navigate = useNavigate();
+  const {setSideNavbarVisible} = useContext(AppContext);
   return (
     <div className="side-navbar">
-      <img src={assets.logo_negative} className='sidenav-img'/>
-      <nav className="nav-links">
-        <NavLink 
-          to="/" 
-          className="nav-item" 
-          activeClassName="active"
+    <div className='side-navbar-header'>
+    <img src={assets.logo_negative} className='sidenav-img'/>
+    <RxCross1 size="20px" onClick={()=>{setSideNavbarVisible(false)}}/>
+    </div>
+      <div className="nav-links">
+        <div 
+        onClick={()=>{navigate("/");
+          setSideNavbarVisible(false);
+        }}
+        className="nav-item" 
         >
           Home
-        </NavLink>
-        <NavLink 
-          to="/collection" 
+        </div>
+        <div 
           className="nav-item" 
-          activeClassName="active"
+          onClick={()=>{
+            navigate("/collection");
+            setSideNavbarVisible(false);
+            }}
         >
           Collection
-        </NavLink>
-        <NavLink 
-          to="/about" 
+        </div>
+        <div 
+        onClick={()=>{navigate("/about");
+          setSideNavbarVisible(false);
+        }}
           className="nav-item" 
-          activeClassName="active"
         >
           About
-        </NavLink>
-        <NavLink 
-          to="/contact" 
-          className="nav-item" 
-          activeClassName="active"
+        </div>
+        <div 
+        onClick={()=>{navigate("/contact");
+          setSideNavbarVisible(false);
+        }}
+          className="nav-item"  
         >
           Contact
-        </NavLink>
-      </nav>
+        </div>
+      </div>
     </div>
   );
 };

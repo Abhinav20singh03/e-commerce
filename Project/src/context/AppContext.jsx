@@ -10,7 +10,8 @@ const AppContextProvider = ({children})=>{
     const [orderedProduct,setOrderedProducts] = useState([]);
     const [sortType,setSortType]  = useState("Relevance");
     const [sideNavbarVisible, setSideNavbarVisible] = useState(false);
-
+    const [loggedIn,setLoggedIn] = useState(false);
+    const shipping = 10;
     const value = {
         products,
         cartProducts,
@@ -20,7 +21,10 @@ const AppContextProvider = ({children})=>{
         sortType,
         setSortType,
         sideNavbarVisible,
-        setSideNavbarVisible        
+        setSideNavbarVisible,
+        loggedIn,
+        setLoggedIn,
+        shipping
     }
 
     return (

@@ -14,6 +14,7 @@ import Login from './pages/Login'
 import HomeFooter from './components/HomeFooter'
 import Footer from './components/Footer'
 import Search from "./pages/Search"
+import Signup from './pages/Signup'
 function App() {
 
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/product/:id" element={<Product/>} /> 
         <Route path="/login" element={<Login/>} />  
         <Route path="/search" element={<Search/>}/>
+        <Route path="/signup" element={<Signup/>}/>
       </Routes>
       <HomeFooter/>
       <Footer/>

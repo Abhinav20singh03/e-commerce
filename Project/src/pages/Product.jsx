@@ -27,6 +27,8 @@ const Product = () => {
         name: product.name,
         price: product.price,
         size: size,
+        image: product.image,
+        quantity: 1
       };
   
       setCartProducts((prev) => {
