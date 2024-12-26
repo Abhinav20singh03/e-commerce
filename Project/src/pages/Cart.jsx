@@ -44,15 +44,15 @@ const Cart = () => {
           <div className='cart-total'>
         <div className='total-elements'>
           <div className='total-element'>Subtotal</div>
-          <div className='total-element-price'>₹{subtotal}.00</div>
+          <div className='total-element-price'>₹ {subtotal}.00</div>
         </div>
         <div className='total-elements'>
           <div className='total-element'>Shipping</div>
-          <div className='total-element-price'>₹{shipping}.00</div>
+          <div className='total-element-price'>₹ {shipping}.00</div>
         </div>
         <div className='total-elements'>
-          <div className='total-element'>total</div>
-          <div className='total-element-price'>₹{total}.00</div>
+          <div className='total-element'>Total</div>
+          <div className='total-element-price'>₹ {total}.00</div>
         </div>
         <div className='checkout-btn' onClick={checkoutHandler}>CHECKOUT</div>
       </div>

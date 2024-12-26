@@ -15,11 +15,13 @@ import HomeFooter from './components/HomeFooter'
 import Footer from './components/Footer'
 import Search from "./pages/Search"
 import Signup from './pages/Signup'
+import Top from './components/Top'
 function App() {
 
   return (
     <div className='home-page'>
       <Navbar/>
+      <Top/>
       <Routes>
         <Route path="/" element={<Home/>} /> 
         <Route path="/about" element={<About/>} /> 

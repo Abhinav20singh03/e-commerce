@@ -10,8 +10,11 @@ const Product = () => {
   const product = products.find((ele) => ele.id === id);
   const [sizeArray, setSizeArray] = useState([]);
  const [sizeSelected,setSizeSelected] = useState(false);
+  const [sizeText,setSizeText] = useState(""); 
+
 
   const sizeHandler = (e) => {
+    setSizeText(e.target.name);
     setSizeArray((prev) => [...prev, e.target.name]);
   };
 
@@ -65,10 +68,10 @@ const Product = () => {
         {product.bestseller && <div className="product-page-bestseller">Bestseller</div>}
         <div className="product-page-cost">₹{product.price}</div>
         <div className="product-page-description">{product.description}</div>
-        <div className="size-heading">Select Size</div>
+        <div className="size-heading">Size : {sizeText}</div>
         <div className="product-page-size">
           {product.sizes.map((size, index) => (
-            <button name={size} onClick={sizeHandler} key={index} className="size-button">
+            <button  name={size} onClick={sizeHandler} key={index} className="size-button">
               {size}
             </button>
           ))}

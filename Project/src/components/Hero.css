@@ -3,16 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your actual image URL */
+    background-image: url(../assets/medium-shot-boy-posing-with-monochrome-outfit.jpg); /* Replace with your actual image URL */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 600px; /* Adjust height as needed */
-    margin-left: 40px; /* Left margin */
-    margin-right: 40px; /* Right margin */
     top:20px;
   }
-  
+  /*'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'*/
   .hero-container::before {
     content: '';
     position: absolute;
@@ -25,6 +23,7 @@
   }
   
   .hero-text {
+    padding: 20px;
     position: absolute;
     text-align: center;
     color: white;
@@ -43,30 +42,37 @@
   }
   
   .shop-now-btn {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background-color: #a06553;
+    padding: 10px 25px;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 10px;
     font-family: poppins;
     font-weight:600;
   }
   
   .shop-now-btn:hover {
-    background-color: #794838;
+    background-color: rgb(152,109,75);
+    color : white;
   }
   @media  (max-width: 768px) {
     
-    .hero-container{
-      margin-left: 20px;
-      margin-right: 20px;
-    }
+    .hero-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
     .shop-now-btn{
-      padding: 7px 16px;
-      font-size: 16px;
+      padding: 7px 20px;
+      font-size: 13px;
     }
     
     

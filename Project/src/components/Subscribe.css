@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
 }
-.input-container{
+.subscribe-input-container{
     display: flex;
 }
 .subscribe-container{
@@ -21,19 +21,23 @@
 .subscribe-description{
     margin:10px;
     color: rgba(0, 0, 0, 0.715);
+    text-align: center;
     
 }
 .subscribe-button{
   background-color: black;
+  padding: 10px 20px;
   display: flex;
   font-family: Poppins;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 400;
-  width: 130px;
+  outline: none;
+  border:none;
+  box-shadow: none;
 }
-.input-container{
+.subscribe-input-container{
     margin: 10px;
     width: 50%; /* Default width on larger screens */
   padding: 10px; /* Padding for better usability */
@@ -50,17 +54,40 @@
     font-family: Poppins;
 }
 @media screen and (max-width: 768px) {
-    .input-container {
+    .subscribe-input-container {
       width: 100%; /* Adjust width for tablets and smaller devices */
     }
   
-  
-  
+   .subscribe-heading{
+    font-size: 20px;
+   }
+   
+   .subscribe-description{
+    font-size: 13px;
+    margin: 0px;
+   } 
+
   .subscribe-input{
-    width:100%;
+    width:90%;
     height:20px;
     padding: 10px;
     border: 2px solid black;
     font-family: Poppins;
+    font-size: 13px;
+    
+}
+
+.subscribe-input-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:center ;
+  align-items: center;
+  padding: 10px;
+  gap:20px
+}
+.subscribe-button{
+  padding: 10px 20px;
+  font-size: 13px;
+ 
 }
 }

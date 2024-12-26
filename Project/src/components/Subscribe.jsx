@@ -5,7 +5,7 @@ const Subscribe = () => {
     <div className='subscribe-container'>
         <div className='subscribe-heading'>Subscribe now & get 20% off</div> 
         <div className='subscribe-description'>this is sanasdnalsndasdb as dakshdkajhsd asdkjahsdab dabd</div> 
-        <div className='input-container'>
+        <div className='subscribe-input-container'>
         <input type='text' className='subscribe-input' placeholder='Enter your email'/>
         <button className='subscribe-button'>Subscribe</button>
         </div>

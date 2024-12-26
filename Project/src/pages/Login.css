@@ -33,7 +33,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 40px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .login-box {
@@ -66,18 +69,20 @@
 }
 
 .signin-button {
-  padding: 10px;
+  padding: 10px 20px;
   font-family: Poppins;
-  background-color: rgb(80, 57, 57);
+  background-color: #6C4E31;
   color: white;
   font-weight: 500;
   font-size: 16px;
-  width: 100px;
+  width: 120px;
   transition: 300ms;
+  border: none;
+  outline: none;
 }
 
 .signin-button:hover {
-  background-color: rgb(152, 118, 118);
+  background-color: #825d3a;
 }
 
 @media (max-width: 768px) {

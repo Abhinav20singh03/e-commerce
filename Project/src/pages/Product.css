@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     padding:20px ;
-    
+    margin-top: 30px;
 }
 .product-page-container-right{
     width: 40%;
@@ -18,17 +18,17 @@
 .product-page-bestseller{
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .product-page-cost{
     font-size:25px;
     font-weight:600;
-    margin-bottom:30px;
+    margin-bottom:20px;
 }
 .product-page-description{
     font-size:14px ;
     color: #000000c4;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 .product-page-size{
     display: flex;
@@ -42,13 +42,13 @@
     font-size: 16px;
     justify-content: center;
     align-items: center;
-    padding:18px ;
+    padding:20px 40px ;
     width: 25px;
     height: 25px;
-    background-color: #f0eeeec4;
-    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.184);
+    background-color: #fdfdfdc4;
     cursor: pointer;
-
+    border : 1px solid black;
+    border-radius: 5px;
 }
 .product-page-description{
     width: 100%;
@@ -66,7 +66,7 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: rgb(86, 60, 60);
+    background-color: #6C4E31;
     width:150px;
     color: white;
     margin-top: 20px;
@@ -74,7 +74,7 @@
     cursor: pointer;
 }
 .product-page-checkout:hover{
-    background-color: rgb(173, 112, 112);
+    background-color: #825d3a;
     color: rgb(255, 255, 255);
     transition: 300ms;
 }
@@ -89,7 +89,7 @@
         align-items: center;
     }
     .product-page-image{
-        width:300px;
+        width:100%;
     }
     .product-page-container-right{
         display: flex;
@@ -98,6 +98,7 @@
         justify-content: center;
         margin:0px;
         width: 100%;
+        
     }
     .product-page-name,.product-page-cost,.product-page-bestseller{
         font-size: 18px;
@@ -115,5 +116,20 @@
     .product-page-checkout{
         width: 40%;
     }
-    
+    .product-page-bestseller{
+        margin-bottom: 15px;
+    }
+    .product-page-cost{
+        margin-bottom: 15px;
+    }
+    .product-page-description{
+        padding: 10px;
+    }
+    .product-page-footer{
+        padding: 10px;
+    }
+    .product-page-container-left{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
 }

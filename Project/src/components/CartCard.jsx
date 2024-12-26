@@ -32,15 +32,15 @@ const CartCard = ({ product }) => {
 
   return (
     <div className="cart-card">
-      <div className="cart-image">
+      <div className="cart-card-image">
         <img src={product.image} alt="Product" />
       </div>
-      <div className="cart-details">
-        <p className="cart-name">{product.name}</p>
-        <p className="cart-price">₹{product.price}</p>
-        <p className="cart-size">{product.size}</p>
+      <div className="cart-card-details">
+        <div className="cart-card-name">{product.name}</div>
+        <div className="cart-card-price">₹{product.price}</div>
+        <div className="cart-card-size">{product.size}</div>
       </div>
-      <div className="cart-quantity">
+      <div className="cart-card-quantity">
         {/* Use value instead of defaultValue */}
         <input
           type="number"
@@ -49,7 +49,7 @@ const CartCard = ({ product }) => {
           min="1"
         />
       </div>
-      <div className="cart-delete" onClick={deleteHandler}>
+      <div className="cart-card-delete" onClick={deleteHandler}>
         <FaTrash />
       </div>
     </div>
