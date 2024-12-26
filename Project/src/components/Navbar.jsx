@@ -7,16 +7,11 @@ import { IoSearchOutline } from "react-icons/io5";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsPersonCircle } from "react-icons/bs";
 import { BsCart2 } from "react-icons/bs";
-import Dropdown from "./Dropdown";
 import SideNavbar from "./SideNavbar";
 import { AppContext } from "../context/AppContext";
+import Dropdown2 from "./Dropdown2";
 const Navbar = () => {
-  const dropdownOptions = [
-    { label: "My Orders", link: "/orders" },
-    { label: "Logout", link: "#option2" },
-    
-  ];
-
+  
   const {cartProducts,setSideNavbarVisible,sideNavbarVisible} = useContext(AppContext);
   
   const [cartCount, setCartCount] = useState(cartProducts);
@@ -57,7 +52,7 @@ const Navbar = () => {
         </div>
 
         <div className="navigation-features">
-          <Dropdown label="Hover me" options={dropdownOptions} />
+          <Dropdown2/>
           <div className="cart-icon-container">
             <BsCart2 size="25px" onClick={() => navigate("/cart")} />
             <div className="cart-count">{cartCount}</div>

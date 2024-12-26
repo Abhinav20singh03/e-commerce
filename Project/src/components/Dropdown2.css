@@ -1,0 +1,58 @@
+/* Dropdown button */
+.dropbtn2 {
+    background-color: #3498db;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Button hover & focus */
+  .dropbtn2:hover,
+  .dropbtn2:focus {
+    background-color: #2980b9;
+  }
+  
+  /* Dropdown container */
+  .dropdown2 {
+    position: relative; /* Needed for the dropdown content to align correctly */
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (hidden by default) */
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensures it's on top of other elements */
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content2 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change background on hover */
+  .dropdown-content2 a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown when toggled */
+  .dropdown-content2.show {
+    display: block;
+  }
+  .dropdown-links{
+    padding: 10px;
+    transition: 200ms;
+    user-select: none;
+  }
+  .dropdown-links:hover{
+    background-color: black;
+    color: white;
+  }
