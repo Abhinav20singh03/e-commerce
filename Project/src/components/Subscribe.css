@@ -63,7 +63,7 @@
    }
    
    .subscribe-description{
-    font-size: 13px;
+    font-size: 12px;
     margin: 0px;
    } 
 
@@ -71,9 +71,9 @@
     width:90%;
     height:20px;
     padding: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
     font-family: Poppins;
-    font-size: 13px;
+    font-size: 12px;
     
 }
 
@@ -87,7 +87,7 @@
 }
 .subscribe-button{
   padding: 10px 20px;
-  font-size: 13px;
+  font-size: 12px;
  
 }
 }
