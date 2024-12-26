@@ -132,4 +132,8 @@
         margin-bottom: 20px;
         margin-top: 20px;
     }
+    .size-button{
+        padding: 15px 30px;
+        font-size: 14px;
+    }
 }

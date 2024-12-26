@@ -12,9 +12,9 @@ import SideNavbar from "./SideNavbar";
 import { AppContext } from "../context/AppContext";
 const Navbar = () => {
   const dropdownOptions = [
-    { label: "Option 1", link: "#option1" },
-    { label: "Option 2", link: "#option2" },
-    { label: "Option 3", link: "#option3" },
+    { label: "My Orders", link: "/orders" },
+    { label: "Logout", link: "#option2" },
+    
   ];
 
   const {cartProducts,setSideNavbarVisible,sideNavbarVisible} = useContext(AppContext);
