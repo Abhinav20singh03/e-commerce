@@ -12,7 +12,6 @@ const createToken = (id)=>{
 
 const loginUser =async (req,res)=>{
    try {
-    
     const {email,password} = req.body;
     const user = await userModel.findOne({email});
     if(user==null){
@@ -77,4 +76,4 @@ const adminLogin =async (req,res)=>{
  return "";
 }
 
-export { loginUser,adminLogin,registerUser}
+export {loginUser,adminLogin,registerUser}
