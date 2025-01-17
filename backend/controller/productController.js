@@ -59,7 +59,12 @@ const addProducts = async (req, res) => {
 
 
 const removeProducts = async(req,res)=>{
-  res.send("hello");
+  try {
+    let product = await productModel.findByIdAndDelete(req.body.id);
+    res.json({success:true,message:"Product removed",product});
+  } catch (error) {
+    res.json({success:false,message:error.message});
+  }
 }
 
 const listProducts = async(req,res)=>{
@@ -73,8 +78,13 @@ const listProducts = async(req,res)=>{
 }
 
 const singleProduct = async(req,res)=>{
-  const product = await productModel.findOne({});
-  res.json(product);
+  try {
+    const {productId} = req.body;
+    const product = await productModel.findById(productId);
+    res.json({success:true,product});
+  } catch (error) {
+    res.json({success:false,message:error.message});
+  }
 }
 
 export {addProducts,removeProducts,listProducts,singleProduct};
