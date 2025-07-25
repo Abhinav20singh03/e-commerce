@@ -58,14 +58,25 @@ const addProducts = async (req, res) => {
 };
 
 
-const removeProducts = async(req,res)=>{
+const removeProducts = async (req, res) => {
   try {
-    let product = await productModel.findByIdAndDelete(req.body.id);
-    res.json({success:true,message:"Product removed",product});
+    console.log("Received request body:", req.body); // Debugging line
+
+    if (!req.body.id) {
+      return res.json({ success: false, message: "Product ID is required" });
+    }
+
+    let product = await productModel.deleteOne({ _id: req.body.id });
+
+    if (product.deletedCount === 0) {
+      return res.json({ success: false, message: "No product found with the given ID" });
+    }
+
+    res.json({ success: true, message: "Product removed successfully", product });
   } catch (error) {
-    res.json({success:false,message:error.message});
+    res.json({ success: false, message: error.message });
   }
-}
+};
 
 const listProducts = async(req,res)=>{
   try {

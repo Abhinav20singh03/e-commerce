@@ -1,12 +1,14 @@
-import { createContext, useState } from "react";
-import { products } from "../assets/assets";
-
+import { createContext, useEffect, useState } from "react";
+import axios from "axios"
+import { toast } from "react-toastify";
 
 export const AppContext = createContext();
 
 const AppContextProvider = ({children})=>{ 
 
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const [cartProducts,setCartProducts]  = useState([]);
+    const [products,setProducts]  = useState([]);
     const [orderedProduct,setOrderedProducts] = useState([]);
     const [sortType,setSortType]  = useState("Relevance");
     const [sideNavbarVisible, setSideNavbarVisible] = useState(false);
@@ -14,6 +16,7 @@ const AppContextProvider = ({children})=>{
     const shipping = 10;
     const value = {
         products,
+        setProducts,
         cartProducts,
         setCartProducts,
         orderedProduct,
@@ -24,8 +27,28 @@ const AppContextProvider = ({children})=>{
         setSideNavbarVisible,
         loggedIn,
         setLoggedIn,
-        shipping
+        shipping,
+        backendUrl
     }
+
+    const getProductData = async()=>{
+        try {
+            const response = await axios.get(backendUrl+"/api/products/list");
+            if(response.data.success){
+                setProducts(response.data.products);
+                console.log(response.data.products);
+            }else{
+                toast.error("Response Not Found");
+            }
+            
+        } catch (error) {
+            toast.error(error.messsage);
+        }
+    }
+    useEffect(()=>{
+        getProductData();
+    },[]);
+
 
     return (
         <AppContext.Provider value={value}>

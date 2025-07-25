@@ -1,0 +1,105 @@
+/* Main container to center the form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Add padding for smaller screens */
+    box-sizing: border-box;
+    background-color: #f8f9fa; /* Optional: Light background */
+    margin: 0; /* Ensure no margin pushing the content */
+  }
+  
+  /* Centering and styling the form box */
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Limit the maximum width of the form */
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff; /* White background for the form */
+  }
+  
+  /* Center the heading */
+  .login-heading {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Input container for consistent layout */
+  .login-input-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .login-email,
+  .login-password {
+    width: 100%;
+    padding: 12px;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    padding-right: 40px; /* Space for the password icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .login-email:focus,
+  .login-password:focus {
+    border-color: #6c4e31; /* Highlight on focus */
+    outline: none;
+  }
+  
+  /* Password icon styling */
+  .password-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: gray;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .password-icon:hover {
+    color: #333;
+  }
+  
+  /* Button styling */
+  .signin-button {
+    padding: 12px;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #6c4e31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .signin-button:hover {
+    background-color: #825d3a;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 20px; /* Add more space on small screens */
+    }
+    .login-box {
+      width: 100%; /* Use full width on small screens */
+    }
+  }
+  

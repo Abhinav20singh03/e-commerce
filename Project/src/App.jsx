@@ -16,6 +16,7 @@ import Footer from './components/Footer'
 import Search from "./pages/Search"
 import Signup from './pages/Signup'
 import Top from './components/Top'
+import { ToastContainer } from 'react-toastify'
 function App() {
 
   return (
@@ -37,6 +38,7 @@ function App() {
       </Routes>
       <HomeFooter/>
       <Footer/>
+      <ToastContainer/>
     </div>
   )
 }

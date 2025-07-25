@@ -1,62 +1,54 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { AppContext } from '../context/AppContext';
-import { useParams } from 'react-router-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import React, { useContext, useState, useEffect } from "react";
+import { AppContext } from "../context/AppContext";
+import { useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 import "./Product.css";
 
 const Product = () => {
   const { id } = useParams();
   const { products, cartProducts, setCartProducts } = useContext(AppContext);
-  const product = products.find((ele) => ele.id === id);
-  const [sizeArray, setSizeArray] = useState([]);
- const [sizeSelected,setSizeSelected] = useState(false);
-  const [sizeText,setSizeText] = useState(""); 
+  
+  // Ensure products are available before finding the product
+  if (products.length === 0) {
+    return <div>Loading products...</div>;
+  }
 
+  const product = products.find((ele) => ele._id === id);
+
+  // If the product is not found, show an error message
+  if (!product) {
+    return <div>Product not found.</div>;
+  }
+
+  const [sizeArray, setSizeArray] = useState([]);
+  const [sizeText, setSizeText] = useState("");
 
   const sizeHandler = (e) => {
     setSizeText(e.target.name);
     setSizeArray((prev) => [...prev, e.target.name]);
   };
 
-
   const addToCartHandler = () => {
-    toast.success("Item added to cart", {
-      position: "top-center",
-    });
-    
+    toast.success("Item added to cart", { position: "top-center" });
+
     sizeArray.forEach((size) => {
       const productObject = {
-        id: product.id,
+        id: product._id,
         name: product.name,
         price: product.price,
         size: size,
         image: product.image,
-        quantity: 1
+        quantity: 1,
       };
-  
+
       setCartProducts((prev) => {
         const isDuplicate = prev.some(
           (item) => item.id === productObject.id && item.size === productObject.size
         );
-  
-        if (!isDuplicate) {
-          return [...prev, productObject];
-        }
-  
-        return prev;
+        return isDuplicate ? prev : [...prev, productObject];
       });
     });
-  
-    console.log(cartProducts);
-  };  
-
-
-  useEffect(() => {
-    console.log('Updated cartProducts:', cartProducts);
-  }, [cartProducts]);
-
-
-
+  };
 
   return (
     <div className="product-page-container">
@@ -71,7 +63,7 @@ const Product = () => {
         <div className="size-heading">Size : {sizeText}</div>
         <div className="product-page-size">
           {product.sizes.map((size, index) => (
-            <button  name={size} onClick={sizeHandler} key={index} className="size-button">
+            <button name={size} onClick={sizeHandler} key={index} className="size-button">
               {size}
             </button>
           ))}

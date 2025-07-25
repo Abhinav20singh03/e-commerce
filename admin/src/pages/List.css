@@ -1,0 +1,24 @@
+
+  .card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px;
+  }
+  .heading{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: 600;
+
+  }
+  .no-products{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
+  }

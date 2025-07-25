@@ -17,8 +17,8 @@ const LatestSection = ({size,sectionHeading,sectionDescription}) => {
       <h2>{sectionHeading}</h2>
       <p>{sectionDescription}</p>
       <div className="product-grid">
-        {productarray.map(product => (
-          <ProductCard key={product.id} product={product} />
+        {products.map((product,index) => (
+          <ProductCard key={index} product={product} />
         ))}
       </div>
     </section>

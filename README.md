@@ -1,58 +1,308 @@
-# Thrift Treasure
+# Thrift Treasure E-Commerce Platform
 
-Thrift Treasure is an e-commerce website designed to provide a seamless online shopping experience. Built with React, it features a modern, responsive user interface and is currently in the process of integrating a backend for dynamic functionality.
+**Thrift Treasure** is a comprehensive full-stack e-commerce platform designed to modernize thrift shopping. Built with React (Vite) for the frontend and powered by Node.js, Express, and MongoDB on the backend, the platform includes dedicated applications for customers, admins, and server APIs.
 
-## Features
+---
 
-- **Responsive Design**: Optimized for devices of all sizes, ensuring a smooth shopping experience on both desktop and mobile platforms.
-- **React Frontend**: Developed using React for fast and interactive user interfaces.
-- **User-Friendly UI**: Intuitive navigation and layout for enhanced usability.
-- **Upcoming Features**: Backend integration for real-time product updates, user authentication, and secure payment processing.
+## 🔧 Project Architecture & Structure
 
-## Technologies Used
+| Directory            | Framework         | Purpose            | Key Features                           |
+| -------------------- | ----------------- | ------------------ | -------------------------------------- |
+| `Project` (Frontend) | React + Vite      | Customer interface | Product catalog, cart, authentication  |
+| `Admin`              | React + Vite      | Admin dashboard    | Product management, order tracking     |
+| `Backend`            | Node.js + Express | API & server logic | User mgmt, image upload, payment, auth |
 
-- **Frontend**: React, HTML5, CSS3, JavaScript
-- **State Management**: React Context API (or Redux, if applicable)
-- **Styling**: CSS Modules/Styled Components (mention if any specific library is used)
-- **Backend**: (Upcoming) Node.js, Express.js, MongoDB
+---
 
-## Installation and Setup
+## 🎯 Features & Functionality
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/thrift-treasure.git
-   ```
+### 🌐 Frontend User Experience
 
-2. Navigate to the project directory:
-   ```bash
-   cd thrift-treasure
-   ```
+- **Product Catalog**: 50+ curated products
+- **Category Navigation**: Men, Women, Kids → Topwear, Bottomwear, Winterwear
+- **Advanced Search**: Real-time filtering
+- **Shopping Cart**: Add/remove items, quantity management
+- **Size Selection**: S, M, L, XL, XXL
+- **Price Sorting**: Low → High, High → Low
+- **Responsive Design**: Mobile-first layout
+- **Dynamic Navbar**: Cart counter, mobile sidebar
+- **Product Cards**: Image, price, category
+- **Toast Notifications**: Using `react-toastify`
 
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
+### 🔐 Authentication System
 
-4. Start the development server:
-   ```bash
-   npm start
-   ```
+- **Login/Signup**: Complete flow
+- **Guest Access**: `guest@gmail.com / guest123`
+- **Password Hashing**: With `bcrypt`
+- **JWT Tokens**: For secure access
 
-5. Open your browser and navigate to:
-   ```
-   http://localhost:3000
-   ```
+### 🛠️ Admin Dashboard
 
-## Upcoming Integrations
+- **Add/Edit/Delete Products**: CRUD with Cloudinary image support
+- **Image Management**: Upload via Cloudinary
+- **Product Categorization**: Systematic management
 
-- **Backend Integration**: To enable dynamic product management, user accounts, and secure transactions.
-- **Database**: MongoDB for storing user data, product details, and orders.
-- **Authentication**: Secure user login and registration using JWT.
-- **Payment Gateway**: Integration with popular payment services for seamless transactions.
+---
 
-## Contribution
+## 🧱 Technology Stack
 
-Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request. For significant changes, open an issue to discuss your ideas first.
+### 📦 Frontend (Project)
+
+```json
+"dependencies": {
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "react-icons": "^5.4.0",
+  "react-toastify": "^11.0.2",
+  "react-router-dom": "^7.0.2"
+}
+```
+
+### 📦 Admin Panel
+
+```json
+"dependencies": {
+  "axios": "^1.7.9",
+  "react": "^18.3.1",
+  "react-dom": "^18.3.1",
+  "react-router-dom": "^7.1.3",
+  "react-toastify": "^11.0.3"
+}
+```
+
+### 📦 Backend
+
+```json
+"dependencies": {
+  "bcrypt": "^5.1.1",
+  "cloudinary": "^2.5.1",
+  "cors": "^2.8.5",
+  "express": "^4.21.2",
+  "jsonwebtoken": "^9.0.2",
+  "mongoose": "^8.9.2",
+  "multer": "^1.4.5-lts.1",
+  "razorpay": "^2.9.5",
+  "stripe": "^17.5.0",
+  "validator": "^13.12.0"
+}
+```
+
+---
+
+## 🧩 Database Schemas
+
+### 🛍 Product Model
+
+```js
+const productSchema = new mongoose.Schema({
+  name: String,
+  description: String,
+  price: Number,
+  image: String,
+  category: String,
+  subCategory: String,
+  sizes: Array,
+  bestseller: Boolean,
+  date: Number
+})
+```
+
+### 👤 User Model
+
+```js
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: { type: String, unique: true },
+  password: String,
+  cartData: { type: Object, default: {} }
+}, { minimize: false })
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 🔍 Prerequisites
+
+- Node.js (14+)
+- MongoDB Atlas
+- Cloudinary account
+
+### 🖥 Frontend (Project)
+
+```bash
+git clone https://github.com/Abhinav20singh03/e-commerce.git
+cd e-commerce/Project
+npm install
+npm run dev
+```
+
+### 🖥 Admin Panel
+
+```bash
+cd e-commerce/admin
+npm install
+npm run dev
+```
+
+### 🖥 Backend
+
+```bash
+cd e-commerce/backend
+npm install
+npm start     # or: npm run server
+```
+
+### 🌱 .env Setup
+
+```env
+PORT=4000
+MONGODB_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+CLOUDINARY_CLOUD_NAME=xxx
+CLOUDINARY_API_KEY=xxx
+CLOUDINARY_API_SECRET=xxx
+ADMIN_EMAIL=admin@example.com
+ADMIN_PASSWORD=admin123
+```
+
+---
+
+## 📡 API Endpoints
+
+### 📦 Product APIs
+
+- `GET /api/products/list` → Fetch all products
+- `POST /api/products/add` → Add product (admin)
+- `POST /api/products/remove` → Delete product
+- `POST /api/products/single` → Get single product details
+
+### 👤 User APIs
+
+- `POST /api/user/register` → Register
+- `POST /api/user/login` → Login
+- `POST /api/user/admin` → Admin login
+
+---
+
+## 🧠 State Management
+
+Using **React Context API** for:
+
+- Product and cart state
+- Authentication
+- UI controls (sidebar, sorting)
+- Order processing
+
+```js
+const AppContext = createContext();
+const value = {
+  products,
+  cartProducts,
+  setCartProducts,
+  orderedProduct,
+  setOrderedProducts,
+  sortType,
+  setSortType,
+  sideNavbarVisible,
+  setSideNavbarVisible,
+  loggedIn,
+  setLoggedIn,
+  shipping
+}
+```
+
+---
+
+## 🗺 Page Routing
+
+```jsx
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/collection" element={<Collection />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route path="/product/:id" element={<Product />} />
+  <Route path="/cart" element={<Cart />} />
+  <Route path="/login" element={<Login />} />
+  <Route path="/signup" element={<Signup />} />
+  <Route path="/search" element={<Search />} />
+  <Route path="/place-order" element={<PlaceOrder />} />
+  <Route path="/orders" element={<Orders />} />
+</Routes>
+```
+
+---
+
+## 🔐 Security & Middleware
+
+- **JWT Middleware**: Secures private routes
+- **bcrypt**: Password encryption
+- **Multer + Cloudinary**: Secure image uploads
+
+---
+
+## 💳 Payment Integration
+
+Supports:
+
+- **Stripe**
+- **Razorpay**
+- **Cash on Delivery (COD)**
+
+---
+
+## 🚀 Build & Deploy
+
+### 🏗 Build Frontend/Admin
+
+```bash
+cd Project && npm run build
+cd ../admin && npm run build
+```
 
 
-Start shopping and discovering treasures at Thrift Treasure today!
+## 📱 Live Demo
+
+🔗 [https://e-commerce-two-cyan-73.vercel.app](https://e-commerce-two-cyan-73.vercel.app)
+
+**Guest Login:**
+
+- Email: `guest@gmail.com`
+- Password: `guest123`
+
+---
+
+## 🌱 Future Enhancements
+
+- Real-time inventory updates
+- Analytics dashboard
+- Multi-vendor support
+- AI recommendations
+- Mobile app integration
+- Social commerce
+
+---
+
+## 🤝 Contributing
+
+```bash
+git checkout -b feature/YourFeature
+git commit -m "Add new feature"
+git push origin feature/YourFeature
+```
+
+Submit a pull request.
+
+---
+
+## 🧑‍💻 Support
+
+- Email: [abhinav20singh03@gmail.com](mailto\:abhinav20singh03@gmail.com)
+- Phone: 8755880855
+- Location: H-225 SRMIST, Ghaziabad, UP
+
+---
+
+Thrift Treasure delivers a seamless and sustainable thrift shopping experience with modern tech and UI/UX practices.
+

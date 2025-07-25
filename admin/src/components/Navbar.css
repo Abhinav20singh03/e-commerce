@@ -7,3 +7,63 @@
     padding-top: 10px;
     font-family: Poppins;
   }
+  .navbar-img{
+    width: 150px;
+  }
+  .pages {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+  }
+  .page {
+    color: black;
+    text-decoration: none;
+    font-weight: normal;
+    transition: transform 0.3s ease, text-decoration 0.3s ease;
+  }
+  .page:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  .page.active {
+    font-weight: bold; /* Optional: to emphasize the active link */
+  }
+  @media screen and (max-width: 768px) {
+    .pages {
+      display: none;
+    }
+    .navbar-container {
+
+      margin-left: 10px;
+      margin-right: 10px;
+     
+    }
+  }
+
+  @media  (min-width: 768px) {
+    .navbar-menu{
+      display: none;
+    }
+  }
+  
+
+ .features{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+ }
+
+ .navbar-logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border:none;
+  background-color: black;
+  color:white;
+  font-weight: 500;
+  font-family: poppins;
+ } 
